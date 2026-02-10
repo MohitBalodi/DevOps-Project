@@ -1,0 +1,9 @@
+services:
+  web-app:
+    build: .
+    ports:
+      - '8080-8081:3000'
+    deploy:
+      replicas: 2
+    volumes:
+      - .:/app
