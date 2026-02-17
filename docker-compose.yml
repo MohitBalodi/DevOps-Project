@@ -2,8 +2,20 @@ services:
   web-app:
     build: .
     ports:
-      - '8080-8081:3000'
-    deploy:
-      replicas: 2
+      - '8080:3000'
     volumes:
       - .:/app
+
+  jenkins:
+    image: jenkins/jenkins:lts
+    privileged: true
+    user: root
+    ports:
+      - '8081:8080'
+      - '50000:50000'
+    volumes:
+      - jenkins_data:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  jenkins_data:
