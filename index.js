@@ -10,5 +10,8 @@ server.listen(3000, '0.0.0.0', () => {
 
 console.log('Git Git');
 console.log('Testing auto trigger'); 
+//failed
+console.log('Testing auto trigger (2)'); 
+
 
 // adding a new feature 
