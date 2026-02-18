@@ -16,3 +16,4 @@ console.log('Testing auto trigger (2)');
 
 // adding a new feature 
 // testing kubernetes auto replace
+// testing kubernetes auto replace (2)  
